@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fdf6e3;
+  color: #5b4b2b;
+  padding: 2rem;
+  background-image: url(img/bgimage.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  transition: font-family 0.3s ease;
+}
+
+body.modern {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+/*--------------------Header and naviagation bar----------------------*/
+header {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  text-align: center;
+  margin: auto; 
+  background-color: 	#fff3b1;
+  opacity: 0.93;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 5px double #7b6334;
+  border-radius: 8px;
+    
+  
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4b3d2a;
+}
+
+nav {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #7b6334;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/*---------------Button and its function--------------------*/
+.play-pause-btn {
+  background-color: #f2e7aa;
+  border: none;
+  color: rgb(54, 49, 49);
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.3em 0.8em 0.3em 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-btn:hover {
+  background-color: #efe92f;
+}
+
+.pause-icon {
+  display: none;
+}
+
+/* Show the play icon only when the audio is paused */
+.playing .play-icon {
+  display: none;
+}
+
+.playing .pause-icon {
+  display: block;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.index_para{
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: normal; 
+  margin: 1rem;
+}
+
+main {
+  flex: 3;
+  min-width: 0;
+}
+
+
+article {
+  background: #F5F5DC;
+  background: linear-gradient(86deg, rgba(245, 245, 220, 1) 0%, rgba(225, 193, 110, 1) 76%, rgba(255, 248, 220, 1) 100%);
+  opacity: 0.94;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #d9c98b;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+article h2 {
+  font-size: 2rem;
+  color: #6a5028;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #F5F5DC;
+  background: linear-gradient(86deg, rgba(245, 245, 220, 1) 0%, rgba(225, 193, 110, 1) 76%, rgba(255, 248, 220, 1) 100%);
+  opacity: 0.94;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 5px solid #d9c98b;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  margin-top: 4rem;
+  color: #a29067;
+  font-size: 0.9rem;
+}
+
+.footer_text{
+  align-self: center;
+
+}
+
+/* About & Contact Pages */
+.about-page, .contact-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fef6d8;
+  border-radius: 8px;
+  border: 1px solid #e5d497;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.03);
+}
+
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-page label {
+  font-weight: bold;
+  color: #6a5028;
+}
+
+.contact-page input, 
+.contact-page textarea {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #cbbd8b;
+  font-family: inherit;
+}
+
+.contact-page button {
+  width: fit-content;
+  background-color: #d2be88;
+  color: #4b3d2a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Make images/audio flexible */
+img, audio, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 🌟 Responsive Media Queries */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  #toggleFont, #muteBtn {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  article h2 {
+    font-size: 1.5rem;
+  }
+
+  .comments textarea {
+    height: 60px;
+  }
+}
+
+/*-----------redit image --------------*/
+.img_redit{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.left-border-box {
+  border-left: 5px solid #9a7b4f; /* blue color */
+  background-color: #e1b894; /* light cyan background */
+  padding: 10px; /* space inside the box */
+  margin: 20px; /* optional: space outside the box */
+  font-size: 18px; /* just to make it look nicer */
+}
+
+/*-----------font faimly----------------*/
+.tagesschrift-regular {
+  font-size: 1.5rem;
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.item {
+  width: 50%; /* 2 images per row */
+  height: auto;
+}
+
+.inline-container {
+  margin: 1rem;
+  display: flex;
+  align-items: center; /* vertically center image and text */
+}
+.figure-container {
+  flex: 0 0 40%;
+  width: 500px; /* or any size you want */
+  height: auto;
+  margin-right: 10px; /* space between image and text */
+}
